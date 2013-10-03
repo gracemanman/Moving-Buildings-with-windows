@@ -1,0 +1,77 @@
+
+int r;
+int b;
+int g;
+
+
+void setup() {
+  size(800, 600);
+  frameRate(10); 
+}
+void draw() {
+  background(255);
+
+  //draw the ground
+  fill(255, 200, 200);
+  noStroke();
+  rect(0, 550, 800, 100);
+
+  // draw the first building
+  fill(#E4DCCB);
+  noStroke();
+  int buildingOneX = int(random (100, 400));
+  rect(buildingOneX, 150, 200, 400);
+
+  //draw the windows for the first building
+  for (int x1=buildingOneX+20;x1<buildingOneX+170;x1=x1+60) {
+    for (int y1=180;y1<500;y1=y1+60) {
+      r=int(random(0, 255));
+      g=int(random(0, 255));
+      b=int(random(0, 255));
+      fill(r, g, b);
+
+      // draw the rectangles
+      noStroke();
+      rect(x1, y1, 50, 50);
+    }
+  }
+
+  //draw the second building
+  fill(#A6C4BC);
+  noStroke();
+  int buildingTwoX = int(random(500,700));
+  rect(buildingTwoX, 250, 100, 300);
+
+  //draw the windows for the second builidng
+  for (int x2=buildingTwoX+20;x2<buildingTwoX+100;x2=x2+40) {
+    for (int y2=300;y2<530;y2=y2+40) {
+      r=int(random(0, 171));
+      g=int(random(0, 154));
+      b=int(random(0, 242));
+      fill(r, g, b);
+
+      // draw the rectangles
+      noStroke();
+      rect(x2, y2, 30, 30);
+    }
+  }
+
+  //draw the third building
+  fill(#D9C099);
+  noStroke();
+  rect(280, 200, 150, 350);
+
+  //draw the windows for the third building
+  for (int x3=300;x3<410;x3=x3+40) {
+    for (int y3=220;y3<500;y3=y3+40) {
+      r=int(random(0, 255));
+      g=int(random(0, 255));
+      b=int(random(0, 255));
+      fill(r, g, b);
+
+      // draw the rectangles
+      noStroke();
+      rect(x3, y3, 30, 30);
+    }
+  }
+}
